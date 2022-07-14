@@ -4,7 +4,6 @@
     "pages/statistics/statistics",
     "pages/add/add"
   ],
-  
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#f1f1f1",
