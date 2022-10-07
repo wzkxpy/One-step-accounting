@@ -1,0 +1,11 @@
+
+<view class="add-container">
+<view class="block-area"></view>
+ <view class="tip-text">输入金额</view>
+ <view>
+  <input type="digit" maxlength="6" bindinput="inputNumber" focus="true" class="input-number"/>
+ </view>
+ <button class="button-OK" bindtap="inputOK" hover-start-time="2" hover-stay-time="33">
+  确定
+ </button>
+</view>

@@ -1,0 +1,33 @@
+
+<view class="home-container">
+ <view class="block-area"></view>
+ <view class="total-container">
+  <view class="title-text">
+   <text>已花费</text>
+  </view>
+  <text class="total-money-text">{{month_total[1]}}</text>
+  <text class="yuan-text">元</text>
+ </view>
+ <view class="block-area"></view>
+ <scroll-view scroll-y="true" class="record-scroll-container">
+  <view wx:for="{{records}}" wx:key="*this">
+   <view wx:if="{{item[0][2]!=records[index-1][0][2]}}" class="each-date-container">
+    <text>{{item[0][1]}}月{{item[0][2]}}日</text>
+    <text> 支出{{days_total[item[0][2]-1]}}元</text>
+   </view>
+   <view class="each-record" capture-bind:longpress="toDelete" data-delmsg ="{{item}}" hover-class="each-record-clicked" hover-start-time="10" hover-stay-time="50">
+    <text wx:if="{{item[0][4]<10&&item[0][3]<10}}" class="each-time-text">0{{item[0][3]}}:0{{item[0][4]}}</text>
+    <text wx:elif="{{item[0][4]<10}}" class="each-time-text">{{item[0][3]}}:0{{item[0][4]}}</text>
+    <text wx:elif="{{item[0][3]<10}}" class="each-time-text">0{{item[0][3]}}:{{item[0][4]}}</text>
+    <text wx:else class="each-time-text">{{item[0][3]}}:{{item[0][4]}}</text>
+    <text class="each-money-text">-{{item[1]}}</text>
+   </view>
+   <view class="margin-bottom"></view>
+  </view>
+ </scroll-view>
+ <view class="button-container">
+  <button bindtap="addMoney" hover-start-time="2" class="add-button" hover-stay-time="33">
+   记录一笔
+  </button>
+ </view>
+</view>

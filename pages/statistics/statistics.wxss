@@ -1,0 +1,41 @@
+.statistics-container{
+    background-color: #e7e7e7;
+    height: 100%;
+}
+.block-area{
+    height: 60rpx;
+}
+.record-scroll-container{
+    height: 100%;
+}
+.each-box{
+    display: flex;
+    flex-direction: column;
+    height: 300rpx;
+    line-height: 150rpx;
+    background-color: #fff;
+    margin-bottom: 30rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    border-radius: 17rpx;
+    box-shadow: 0rpx 0rpx 19rpx 0.1rpx #dbdbdb;
+}
+.each-box-upper{
+    background-color: #f7f7f7;
+    border-top-left-radius: 17rpx;
+    border-top-right-radius: 17rpx;
+}
+.month-text{
+    margin-left: 25rpx;
+    font-size: 40rpx;
+}
+.text-text{
+    margin-left: 20rpx;
+    font-size: 25rpx;
+    color: #606060;
+}
+.money-text{
+    font-size: 32rpx;
+    margin-right: 30rpx;
+    float: right;
+}
